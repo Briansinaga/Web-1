@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event</title>
+</head>
+<body>
+
+    <!-- Click Event -->
+    <button id="clickButton">Click me</button>
+
+    <!-- Change Event -->
+    <input type="text" id="inputText" placeholder="Type something">
+
+    <!-- Onload Event -->
+    <div id="onloadDiv">This will change on page load</div>
+
+    <!-- Mouseover Event -->
+    <div id="mouseoverDiv">Hover over me</div>
+
+    <!-- Keydown and Keyup Events -->
+    <input type="text" id="keydownInput" placeholder="Press a key">
+
+    <script>
+        // Click Event
+        document.getElementById('clickButton').addEventListener('click', function() {
+            alert('Click Event Terjadi!');
+        });
+
+        // Change Event
+        document.getElementById('inputText').addEventListener('input', function() {
+            alert('Change Event Terjadi! Nilai input: ' + this.value);
+        });
+
+        // Onload Event
+        window.onload = function() {
+            document.getElementById('onloadDiv').innerText = 'Page has loaded!';
+            alert('Onload Event Terjadi!');
+        };
+
+        // Mouseover Event
+        document.getElementById('mouseoverDiv').addEventListener('mouseover', function() {
+            console.log('Mouseover Event Terjadi!');
+        });
+
+        // Keydown and Keyup Events
+        document.getElementById('keydownInput').addEventListener('keydown', function() {
+            console.log('Keydown Event Terjadi!');
+        });
+
+        document.getElementById('keydownInput').addEventListener('keyup', function() {
+            console.log('Keyup Event Terjadi!');
+        });
+    </script>
+</body>
+</html>

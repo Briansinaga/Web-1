@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+
+    <script>
+        function validateForm() {
+            // Mendapatkan nilai input dari elemen formulir
+            var name = document.forms["registrationForm"]["name"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+
+            // Memeriksa apakah nama, email, dan kata sandi diisi
+            if (name == "" || email == "" || password == "") {
+                alert("Harap isi semua kolom!");
+                return false;
+            }
+
+            // Memeriksa format email menggunakan ekspresi reguler
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!emailRegex.test(email)) {
+                alert("Format email tidak valid!");
+                return false;
+            }
+
+            // Memeriksa panjang kata sandi
+            if (password.length < 6) {
+                alert("Kata sandi harus terdiri dari setidaknya 6 karakter!");
+                return false;
+            }
+
+            // Jika semua validasi berhasil, formulir dianggap valid
+            alert("Formulir valid! Data akan dikirim.");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Formulir Pendaftaran</h2>
+
+    <form name="registrationForm" onsubmit="return validateForm()">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">Kata Sandi:</label>
+        <input type="password" id="password" name="password">
+
+        <input type="submit" value="Daftar">
+    </form>
+
+</body>
+</html>

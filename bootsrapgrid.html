@@ -8,10 +8,35 @@
     <title>Learn Bootstrap Grid</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     <div class="container">
         <div class="row">
-            <div class="col bg-warning text-primary">Left</div>
-            <div class="col bg-dark text-success">
+            <div class="col-sm-2 text-primary">Left</div>
+            <div class="col-sm-8 text-success">
                 <p class="h1 text-uppercase">h1 Bootstrap heading</p>
                 <p class="display-4 text-warning">Display 4</p>
                 <table class="table table-striped table-hover">
@@ -36,8 +61,26 @@
                         <td>July@unai.edu</td>
                     </tr>
                 </table>
+                <button type="button" class="btn btn-warning">Login</button>
+                <button class="btn-primary">
+                    <span class="spinner-border spinner-border-sm"></span>
+                    loading...
+                </button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+                <div class="card" style="width: 400px;">
+                <img
+                class="card-img-top" 
+                src="avatar.jpg"
+                alt="card image"
+                style="width: 100%;"/>
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">i'm a web developer. Learning Bootstrap</p>
+                    <a href="#" class="btn btn-primary">See profile</a>
+                </div>
             </div>
-            <div class="col bg-info text-danger">Right
+            </div>
+            <div class="col-sm-2 text-danger">Right
                 <img src="doggy.JPEG" class="img-fluid rounded-circle" alt="dog image">
                 <img src="doggy.JPEG" class="img-fluid rounded" alt="dog image">
                 <img src="doggy.JPEG" class="img-fluid img-thumbnail" alt="dog image">
